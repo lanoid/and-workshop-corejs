@@ -8,9 +8,8 @@
     
 */
 
-String.prototype.capitalize = function() {
-  console.log(this);
-  // Your stuff
+String.prototype.capitalize = function () {
+  return this[0].toUpperCase() + this.slice(1);
 };
 
 test('Capitalise function', () => {
@@ -31,8 +30,8 @@ function Car(model, year, miles) {
   this.year = year;
   this.miles = miles;
 
-  this.toString = function() {
-    return this.model + ' has done ' + this.miles + ' miles';
+  this.toString = function () {
+    return `${this.model} has done ${this.miles} miles`;
   };
 }
 
